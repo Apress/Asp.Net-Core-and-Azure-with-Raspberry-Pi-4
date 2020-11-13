@@ -1,0 +1,74 @@
+{
+  "@id": "urn:apressIotCentral:RaspberryPi_6th:1",
+  "@type": "CapabilityModel",
+  "implements": [
+    {
+      "@id": "urn:apressIotCentral:RaspberryPi_6th:t2nevnx5f:1",
+      "@type": "InterfaceInstance",
+      "displayName": {
+        "en": "Interface"
+      },
+      "name": "RaspberryPi_7fp",
+      "schema": {
+        "@id": "urn:apressIotCentral:RaspberryPi_7fp:1",
+        "@type": "Interface",
+        "displayName": {
+          "en": "Interface"
+        },
+        "contents": [
+          {
+            "@id": "urn:apressIotCentral:RaspberryPi_7fp:Temperature:1",
+            "@type": [
+              "Telemetry",
+              "SemanticType/Temperature"
+            ],
+            "description": {
+              "en": "Temperature data"
+            },
+            "displayName": {
+              "en": "Temperature"
+            },
+            "name": "Temperature",
+            "schema": "double",
+            "unit": "celsius"
+          },
+          {
+            "@id": "urn:apressIotCentral:RaspberryPi_7fp:Room:1",
+            "@type": "Property",
+            "displayName": {
+              "en": "Room"
+            },
+            "name": "Room",
+            "writable": true,
+            "schema": "string"
+          },
+          {
+            "@id": "urn:apressIotCentral:RaspberryPi_7fp:TakeThePicture:1",
+            "@type": "Command",
+            "commandType": "synchronous",
+            "durable": false,
+            "request": {
+              "@id": "urn:apressIotCentral:RaspberryPi_7fp:TakeThePicture:ImageType:1",
+              "@type": "SchemaField",
+              "displayName": {
+                "en": "Image type"
+              },
+              "name": "ImageType",
+              "schema": "string"
+            },
+            "displayName": {
+              "en": "Take the picture"
+            },
+            "name": "TakeThePicture"
+          }
+        ]
+      }
+    }
+  ],
+  "displayName": {
+    "en": "Raspberry Pi"
+  },
+  "@context": [
+    "http://azureiot.com/v1/contexts/IoTModel.json"
+  ]
+}

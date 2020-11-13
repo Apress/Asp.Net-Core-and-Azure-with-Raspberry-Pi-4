@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [      
+        {
+            "name": "Rpi Publish and Debug",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "RpiPublish",
+            "program": "~/${workspaceFolderBasename}/${workspaceFolderBasename}",
+            "cwd": "~/${workspaceFolderBasename}",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "pipeTransport": {
+                "pipeCwd": "${workspaceRoot}",
+                "pipeProgram": "/usr/bin/ssh",
+                "pipeArgs": [
+                    "pi@192.168.0.80"
+                ],
+                "debuggerPath": "~/vsdbg/vsdbg"
+            }
+        }
+    ]
+}
